@@ -39,8 +39,8 @@
 * 0.0.1, 26 Sept 2016, initial hack
 *
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>batfai.samuentropy.brainboard7</groupId>
@@ -49,12 +49,12 @@
     <packaging>apk</packaging>
     <name>NeuronTable</name>
     <url>https://github.com/nbatfai/SamuEntropy</url>
-    <description>Samu Entropy: ESPORT AND ARTIFICIAL INTELLIGENCE. 
-        It is quite obvious that there is a close relation between esport and artificial intelligence. 
+    <description>Samu Entropy: ESPORT AND ARTIFICIAL INTELLIGENCE.
+        It is quite obvious that there is a close relation between esport and artificial intelligence.
         This relation is further enhanced by our research which tries to focus not only on using the
         artificial intelligence but on creating it in a new way. Our idea is to develop a new developmental
-        robotics and robopsychology based game called Samu Entropy as a social robot that will be 
-        implemented by software on the family’s home desktop and mobile devices. Further details can be 
+        robotics and robopsychology based game called Samu Entropy as a social robot that will be
+        implemented by software on the family’s home desktop and mobile devices. Further details can be
         found at: https://github.com/nbatfai/SamuEntropy</description>
     <organization>
         <name>Norbert Batfai, University of Debrecen, Department of Information Technology</name>
@@ -83,26 +83,31 @@
             <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+          <groupId>com.threed</groupId>
+          <artifactId>jpct_ae</artifactId>
+          <version>1.0</version>
+        </dependency>
     </dependencies>
-    <build>        
+    <build>
         <finalName>${project.artifactId}</finalName>
-        <sourceDirectory>src</sourceDirectory>        
+        <sourceDirectory>src</sourceDirectory>
         <plugins>
-            <plugin> 
-                <groupId>com.simpligility.maven.plugins</groupId> 
-                <artifactId>android-maven-plugin</artifactId> 
-                <version>4.4.3</version> 
-                <configuration> 
+            <plugin>
+                <groupId>com.simpligility.maven.plugins</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>4.4.3</version>
+                <configuration>
                     <sdk>
                         <platform>19</platform>
                     </sdk>
-                    <deleteConflictingFiles>true</deleteConflictingFiles> 
-                    <undeployBeforeDeploy>true</undeployBeforeDeploy> 
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
                     <androidManifestFile>AndroidManifest.xml</androidManifestFile>
                     <resourceDirectory>res</resourceDirectory>
-                </configuration> 
-                <extensions>true</extensions> 
+                </configuration>
+                <extensions>true</extensions>
             </plugin>
         </plugins>
-    </build>  
+    </build>
 </project>
